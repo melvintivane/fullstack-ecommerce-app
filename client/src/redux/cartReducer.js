@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-
 export const cartSlice = createSlice({
     name: "cart",
     initialState: {
@@ -20,7 +19,7 @@ export const cartSlice = createSlice({
                 // Se o item já estiver no carrinho, aumentar a quantidade
                 itemExistente.quantity += novoItem.quantity;
                 
-                if (state.quantidade === 0) {a
+                if (state.quantidade === 0) {
                     state.quantidade += 1;
                 }
             } else {
