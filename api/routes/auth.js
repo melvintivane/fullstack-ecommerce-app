@@ -33,9 +33,9 @@ router.post("/login", async (req, res) => {
         //!user && res.status(401).json("CREDENCIAIS ERRADOS!");
 
         if (!user) {
-            res.status(401).json("CREDENCIAIS ERRADOS!");
+            return res.status(401).json("CREDENCIAIS ERRADOS!");
             // stop further execution in this callback
-            return;
+            //return;
         }
 
 
@@ -45,7 +45,9 @@ router.post("/login", async (req, res) => {
 
         const inputPassword = req.body.password;
         
-        originalPassword != inputPassword && res.status(401).json("PALAVRA-PASSE OU E-MAIL ERRADO!");
+        if (originalPassword != inputPassword) {
+            return res.status(401).json("PALAVRA-PASSE OU E-MAIL ERRADO!");
+        }
 
         const accessToken = Jwt.sign(
             {
