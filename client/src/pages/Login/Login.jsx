@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Login.scss"
 import { useDispatch, useSelector } from 'react-redux';
 import { loginFailure, loginStart, loginSuccess } from "../../redux/userReducer";
-import { userRequest } from '../../requestMethods';
+import { publicRequest } from '../../requestMethods';
 import { Link } from "react-router-dom";
 
 
@@ -10,24 +10,29 @@ const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  const { isFetching, error } = useSelector((state) => state.user);
+  const { isFetching, error } = useSelector((state) => state.usuario);
 
+  //TEMPORARY SOLUTION
+  useEffect(() => {
+    dispatch(loginSuccess()); // Redefine o estado do error ao montar o componente
+  }, [dispatch]);
 
-  const login = async (dispatch, user) => {
+  const login = async (dispatch, usuario) => {
     dispatch(loginStart());
 
     try {
-      const res = await userRequest.post("/auth/login", user);
+      const res = await publicRequest.post("/auth/login", usuario);
       dispatch(loginSuccess(res.data));
 
-      window.location.href = "http://localhost:5173";
+      //window.location.href = "http://localhost:5173";
     } catch (err) {
       dispatch(loginFailure());
     }
   }
 
-  const handleClick = (e) => {
-    e.preventDefault();
+  const handleClick = (event) => {
+    event.preventDefault();
+
     login(dispatch, { username, password });
   };
 
@@ -36,8 +41,8 @@ const Login = () => {
         <div className='wrapper'>
           <h1 className='title'>SIGN IN</h1>
           <form >
-            <input placeholder="username" onChange={(e) => setUsername(e.target.value)}/>
-            <input placeholder="password" type='password' onChange={(e) => setPassword(e.target.value)}/>
+            <input name='username' placeholder="username" onChange={(e) => setUsername(e.target.value)}/>
+            <input name='password' placeholder="password" type='password' onChange={(e) => setPassword(e.target.value)}/>
             <button onClick={handleClick} disabled={isFetching} >LOGIN</button>
             {error && <span>Something went wrong...</span>}
             <Link className="link" to="/register">

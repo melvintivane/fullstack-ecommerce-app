@@ -39,6 +39,10 @@
                 color: white;
                 cursor: pointer;
                 margin: 15px 0;
+                &:disabled {
+                    color: grey;
+                    cursor: not-allowed;
+                }
             }
 
             a {

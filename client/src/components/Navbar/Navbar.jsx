@@ -51,11 +51,11 @@ const Navbar = () => {
             <Link className ="link" to="/">Contact</Link>
           </div>
           <div className="item">
-            <Link className ="link" to="/">Stores</Link>
+            <Link className ="link" to="/login">Login</Link>
           </div>
           <div className="icons">
-            <SearchIcon/>
             <PersonOutlineOutlinedIcon/>
+            <SearchIcon/>
             <FavoriteBorderOutlinedIcon/>
             <div className="cartIcon" onClick={()=> setOpen(!open)}>
               <ShoppingCartOutlinedIcon/>

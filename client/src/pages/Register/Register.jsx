@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { publicRequest } from '../../requestMethods';
 
 const Register = () => {
-
     const [name, setName] = useState("");
     const [lastname, setLastname] = useState("");
     const [username, setUsername] = useState("");
@@ -28,7 +27,6 @@ const Register = () => {
             console.log(error);
         }
     } 
-
 
     return (
         <div className='container'>
