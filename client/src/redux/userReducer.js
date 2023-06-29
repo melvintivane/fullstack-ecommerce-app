@@ -2,11 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 export const userSlice = createSlice({
-    name: "user2",
+    name: "usuario",
     initialState: {
         currentUser: null,
         isFetching: false,
-        error: false
+        error: false,
     },
     reducers: {
         loginStart: (state) => {
@@ -21,6 +21,10 @@ export const userSlice = createSlice({
             state.isFetching = false;
             state.error = true;
         },
+        logout: (state) => {
+            state.currentUser = null;
+            state.error = false;
+        }
     },
 });
 
