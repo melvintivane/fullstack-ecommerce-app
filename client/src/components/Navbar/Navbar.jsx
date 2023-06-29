@@ -13,6 +13,9 @@ const Navbar = () => {
 
 	const [open, setOpen] = useState(false);
   const quantidade = useSelector((state) => state.cart.quantidade);
+  const user = useSelector((state) => state.usuario.currentUser);
+
+  console.log(user);
 
 
   return (
@@ -50,9 +53,18 @@ const Navbar = () => {
           <div className="item">
             <Link className ="link" to="/">Contact</Link>
           </div>
-          <div className="item">
-            <Link className ="link" to="/login">Login</Link>
-          </div>
+          {/* Condição adicionada para mostrar o Link de login ou o nome do usuário */}
+          {user === null || user === undefined ? (
+            <div className="item">
+              <Link className="link" to="/login">
+                Login
+              </Link>
+            </div>
+          ) : (
+            <div className="item usuario">
+              <span>{user?.name}</span>
+            </div>
+          )}
           <div className="icons">
             <PersonOutlineOutlinedIcon/>
             <SearchIcon/>
