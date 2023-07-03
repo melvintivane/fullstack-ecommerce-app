@@ -14,6 +14,12 @@
             font-size: 14px;
         }
 
+        .usuario {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2879fe;
+        }
+
         .left {
             display: flex;
             align-items: center;
@@ -36,6 +42,10 @@
                 gap: 15px;
                 color: #777;
                 cursor: pointer;
+
+                .userIcon {
+                    color: #2879fe;
+                }
 
                 .cartIcon {
                     position: relative;

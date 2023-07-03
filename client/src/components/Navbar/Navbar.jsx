@@ -66,7 +66,7 @@ const Navbar = () => {
             </div>
           )}
           <div className="icons">
-            <PersonOutlineOutlinedIcon/>
+            <PersonOutlineOutlinedIcon className="userIcon"/>
             <SearchIcon/>
             <FavoriteBorderOutlinedIcon/>
             <div className="cartIcon" onClick={()=> setOpen(!open)}>
