@@ -3,7 +3,7 @@ import "./Login.scss"
 import { useDispatch, useSelector } from 'react-redux';
 import { loginFailure, loginStart, loginSuccess } from "../../redux/userReducer";
 import { publicRequest } from '../../requestMethods';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 const Login = () => {
@@ -11,6 +11,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const { isFetching, error } = useSelector((state) => state.usuario);
+  const navigate = useNavigate();
 
   //TEMPORARY SOLUTION
   useEffect(() => {
@@ -24,7 +25,7 @@ const Login = () => {
       const res = await publicRequest.post("/auth/login", usuario);
       dispatch(loginSuccess(res.data));
 
-      //window.location.href = "http://localhost:5173";
+      navigate("/");
     } catch (err) {
       dispatch(loginFailure());
     }
