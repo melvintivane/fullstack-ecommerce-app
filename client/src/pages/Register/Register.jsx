@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./Register.scss"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { publicRequest } from '../../requestMethods';
 
 const Register = () => {
@@ -9,6 +9,8 @@ const Register = () => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
+    const navigate = useNavigate();
 
     const register = async (e) => {
         e.preventDefault();
@@ -20,9 +22,7 @@ const Register = () => {
                 email,
                 password
             });
-            console.log(response.data); // Exibe a resposta do servidor no console
-            // Lógica adicional após o registro ser bem-sucedido
-            window.location.href = "http://localhost:5173/login";
+            navigate("/login");
         } catch (error) {
             console.log(error);
         }
