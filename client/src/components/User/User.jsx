@@ -2,6 +2,7 @@ import React from "react";
 import "./User.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/userReducer";
+import { resetCart } from "../../redux/cartReducer";
 
 
 const User = () => {
@@ -10,6 +11,7 @@ const User = () => {
 
     function Logout() {
         dispatch(logout());
+        dispatch(resetCart());
         window.location.reload();
     }
 
