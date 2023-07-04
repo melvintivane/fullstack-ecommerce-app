@@ -17,6 +17,20 @@ const Navbar = () => {
   const quantidade = useSelector((state) => state.cart.quantidade);
   const user = useSelector((state) => state.usuario.currentUser);
 
+  function handleUserInfo() {
+    setOpenUser(!openUser);
+    if (open == true) {
+      setOpen(false);
+    }
+  }
+
+  function handleCart() {
+    setOpen(!open);
+    if (openUser == true) {
+      setOpenUser(false);
+    }
+  }
+
   //console.log(user);
 
   return (
@@ -62,7 +76,7 @@ const Navbar = () => {
               </Link>
             </div>
           ) : (
-            <div className="user" onClick={()=> setOpenUser(!openUser)}>
+            <div className="user" onClick={handleUserInfo}>
               <div className="item usuario">
                 <span>{user?.name}</span>
                 <PersonOutlineOutlinedIcon className="userIcon"/>
@@ -72,15 +86,15 @@ const Navbar = () => {
           <div className="icons">
             <SearchIcon/>
             <FavoriteBorderOutlinedIcon/>
-            <div className="cartIcon" onClick={()=> setOpen(!open)}>
+            <div className="cartIcon" onClick={handleCart}>
               <ShoppingCartOutlinedIcon/>
               <span>{quantidade}</span>
             </div>
           </div>
         </div>
       </div>
-	  {open && <Cart/>}
-    {openUser && <User/>}
+      {open && <Cart/>}
+      {openUser && <User/>}
     </div>
   )
 }
