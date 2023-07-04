@@ -1,0 +1,59 @@
+.userContainer {
+  //width: 320px;
+  position: absolute;
+  right: 140px;
+  top: 80px;
+  z-index: 999;
+  background-color: white;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 7px -5px rgba(0, 0, 0, 0.5);
+
+  h1 {
+    margin-bottom: 10px;
+    color: #2879fe;
+    font-weight: 800;
+    font-size: 18px;
+  }
+  
+  .user {
+    max-height: 350px;
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    margin-bottom: 10px;
+    
+    img {
+      width: 80px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .details {
+      p {
+        margin-bottom: 5px;
+        font-size: 18px;
+        color: gray;
+      }
+    }
+
+  }
+
+  button {
+    width: 200px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //gap: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #2879fe;
+    color: white;
+    font-weight: 500;
+    font-size: 10px;
+  }
+
+}
+
+  
