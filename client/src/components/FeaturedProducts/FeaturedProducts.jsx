@@ -4,14 +4,14 @@ import Card from '../Card/Card';
 import { publicRequest } from '../../requestMethods';
 
 
-const FeaturedProducts = ({type}) => {
+const FeaturedProducts = ({type, slug}) => {
 	
 	const [products, setProducts] = useState([]);
 	
 	useEffect(() => {
 		const getProduct = async () => {
 		  try {
-			const res = await publicRequest.get("/products");
+			const res = await publicRequest.get(`/products?type=${slug}`);
 			setProducts(res.data);
 		  } catch {}
 		};
