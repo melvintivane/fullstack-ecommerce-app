@@ -54,15 +54,15 @@ router.post("/", verificarTokenEAdmin, async (req, res)=>{
   //GET ALL PRODUCTS
   router.get("/", async (req, res)=> {
     const queryNew = req.query.new;
-    const queryCategory = req.query.category;
+    const queryType = req.query.type;
     try {
       let products;
   
       if(queryNew) {
         products = await Product.find().sort({createdAt: -1}).limit(1)
-      } else if(queryCategory) {
-        products = await Product.find({categories: {
-          $in: [queryCategory],
+      } else if(queryType) {
+        products = await Product.find({type: {
+          $in: [queryType],
         }});
       } else {
         products = await Product.find();
