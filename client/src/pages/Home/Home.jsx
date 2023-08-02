@@ -10,9 +10,9 @@ const Home = () => {
 
     <div className='home'>
       <Slider/>
-      <FeaturedProducts type="Featured"/>
+      <FeaturedProducts type="Featured" slug="featured"/>
       <Categories/>
-      <FeaturedProducts type="Trending"/>
+      <FeaturedProducts type="Trending" slug="trending"/>
       <Contact/>
     </div>
   )
