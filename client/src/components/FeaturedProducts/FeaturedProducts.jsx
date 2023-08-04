@@ -10,13 +10,13 @@ const FeaturedProducts = ({type, slug}) => {
 	
 	useEffect(() => {
 		const getProduct = async () => {
-		  try {
-			const res = await publicRequest.get(`/products?type=${slug}`);
-			setProducts(res.data);
-		  } catch {}
+			try {
+				const res = await publicRequest.get(`/products?type=${slug}`);
+				setProducts(res.data);
+			} catch {}
 		};
 		getProduct();
-	  }, []);
+	}, []);
 
 
 	return (
@@ -34,7 +34,6 @@ const FeaturedProducts = ({type, slug}) => {
 				{products.slice(0, 5).map((item) => (
 					<Card item={item} key={item._id}/>
 				))}
-
 			</div>
 		</div>
 	)
