@@ -1,11 +1,8 @@
 .card {
   width: 200px;
-  //height: 440px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  //margin-bottom: 30px;
-
 
   .image {
     width: 100%;
@@ -17,7 +14,6 @@
     &:hover {
       .secondImg{
         z-index: 2;
-
       }
     }
 
