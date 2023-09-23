@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const BASE_URL = "http://localhost:8080/api/";
+const BASE_URL = "https://kruppstore.onrender.com/api/";
 // const TOKEN = JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser.accessToken || "";
 
 const user = JSON.parse(localStorage.getItem("persist:root"))?.user;
