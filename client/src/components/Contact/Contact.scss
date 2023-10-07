@@ -38,3 +38,36 @@
     }
   }
 }
+
+/* Estilos para tablets (768px de largura ou menos) */
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 10px; /* Reduzir o preenchimento */
+  }
+
+  .wrapper {
+    flex-direction: column; /* Empilhar itens verticalmente */
+    align-items: center; /* Centralizar itens */
+    width: 100%; /* Ocupar toda a largura disponível */
+  }
+
+  input {
+    width: 100%; /* Ocupar toda a largura disponível */
+    margin-bottom: 10px; /* Adicionar espaçamento inferior */
+  }
+
+  button {
+    width: 100%; /* Ocupar toda a largura disponível */
+  }
+}
+
+/* Estilos para dispositivos móveis (576px de largura ou menos) */
+@media screen and (max-width: 576px) {
+  input {
+    width: 100%; /* Ocupar toda a largura disponível */
+  }
+
+  button {
+    width: 100%; /* Ocupar toda a largura disponível */
+  }
+}

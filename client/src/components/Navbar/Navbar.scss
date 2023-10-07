@@ -1,74 +1,142 @@
 .navbar {
-    height: 70px;
-    margin-top: 10px;
-    
-    .wrapper {
-        padding: 10px 30px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+  height: 70px;
+  margin-top: 10px;
 
-        .item {
-            display: flex;
-            align-items: center;
-            font-size: 14px;
-        }
+  .wrapper {
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        .usuario {
-            font-size: 16px;
-            font-weight: bold;
-            color: #2879fe;
-            cursor: pointer;
-            border: 1px solid  #2879fe;
-            padding: 10px;
-
-            .userIcon {
-                color: #2879fe;
-                margin-left: 10px;
-            }
-        }
-
-        .left {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .center {
-            font-size: 25px; 
-            letter-spacing: 2px;
-            // font-weight: 600;
-        }
-
-        .right {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-
-            .icons {
-                display: flex;
-                gap: 15px;
-                color: #777;
-                cursor: pointer;
-
-                .cartIcon {
-                    position: relative;
-                    span {
-                        font-size: 12px;
-                        width: 20px;
-                        height: 20px;
-                        border-radius: 50%;
-                        background-color: #2879fe;
-                        position: absolute;
-                        right: -10px;
-                        top: -10px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        color: white;
-                    }
-                }
-            }
-        }
+    .item {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
     }
+
+    .usuario {
+      font-size: 16px;
+      font-weight: bold;
+      color: #2879fe;
+      cursor: pointer;
+      border: 1px solid #2879fe;
+      padding: 10px;
+
+      .userIcon {
+        color: #2879fe;
+        margin-left: 10px;
+      }
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .center {
+      font-size: 25px;
+      letter-spacing: 2px;
+      // font-weight: 600;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .icons {
+        display: flex;
+        gap: 15px;
+        color: #777;
+        cursor: pointer;
+
+        .cartIcon {
+          position: relative;
+          span {
+            font-size: 12px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #2879fe;
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Estilos para tablets (768px de largura ou menos) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    padding: 10px;
+
+    .item {
+      font-size: 16px;
+    }
+
+    .usuario {
+      font-size: 18px;
+      padding: 8px 16px;
+    }
+
+    .center {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .right {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+
+      .icons {
+        flex-direction: row;
+        margin-top: 10px;
+
+        .cartIcon {
+          span {
+            font-size: 14px;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Estilos para dispositivos móveis (576px de largura ou menos) */
+@media screen and (max-width: 576px) {
+  .navbar {
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .wrapper {
+    padding: 10px;
+
+    .usuario {
+      font-size: 18px;
+      padding: 8px 16px;
+    }
+
+    .center {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
 }

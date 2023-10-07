@@ -1,57 +1,91 @@
 .footer {
-    margin: 100px 214px 20px 214px;
-  
-    .top {
+  margin: 100px 214px 20px 214px;
+
+  .top {
+    display: flex;
+    gap: 50px;
+
+    .item {
+      flex: 1;
       display: flex;
-      gap: 50px;
-  
-      .item {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        text-align: justify;
-        font-size: 14px;
-  
-        h1 {
-          font-size: 18px;
-          font-weight: 500;
-          color: #555;
-        }
-  
-        span{
-          color: gray;
-          font-size: 12px;
-        }
+      flex-direction: column;
+      gap: 10px;
+      text-align: justify;
+      font-size: 14px;
+
+      h1 {
+        font-size: 18px;
+        font-weight: 500;
+        color: #555;
       }
-    }
-  
-    .bottom {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 50px;
-      .left {
-        display: flex;
-        align-items: center;
-  
-        .logo{
-          color: #2879fe;
-          font-weight: bold;
-          font-size: 24px;
-        }
-  
-        .copyright{
-          margin-left: 20px;
-          font-size: 12px;
-          color: gray;
-        }
-      }
-      .right {
-  
-        img{
-          height: 50px;
-        }
+
+      span {
+        color: gray;
+        font-size: 12px;
       }
     }
   }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    .left {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        color: #2879fe;
+        font-weight: bold;
+        font-size: 24px;
+      }
+
+      .copyright {
+        margin-left: 20px;
+        font-size: 12px;
+        color: gray;
+      }
+    }
+    .right {
+      img {
+        height: 50px;
+      }
+    }
+  }
+}
+
+/* Estilos para tablets (768px de largura ou menos) */
+@media screen and (max-width: 768px) {
+  .footer {
+    margin: 50px 30px; /* Reduzir as margens */
+  }
+
+  .top {
+    flex-direction: column; /* Empilhar itens verticalmente */
+    gap: 30px; /* Adicionar espaçamento entre itens */
+  }
+
+  .bottom {
+    flex-direction: column; /* Empilhar itens verticalmente */
+    align-items: center; /* Centralizar itens */
+    margin-top: 30px; /* Reduzir a margem superior */
+  }
+}
+
+/* Estilos para dispositivos móveis (576px de largura ou menos) */
+@media screen and (max-width: 576px) {
+  .footer {
+    margin: 30px 20px; /* Reduzir ainda mais as margens */
+  }
+
+  .top {
+    gap: 20px; /* Reduzir o espaçamento entre itens */
+  }
+
+  .left {
+    flex-direction: column; /* Empilhar itens verticalmente */
+    align-items: center; /* Centralizar itens */
+    text-align: center; /* Centralizar texto */
+  }
+}

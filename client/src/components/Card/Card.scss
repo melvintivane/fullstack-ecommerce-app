@@ -9,10 +9,10 @@
     height: 300px;
     overflow: hidden;
     position: relative;
-    transition: all 10s ease-in-out; 
+    transition: all 10s ease-in-out;
 
     &:hover {
-      .secondImg{
+      .secondImg {
         z-index: 2;
       }
     }
@@ -59,5 +59,43 @@
         text-decoration: line-through;
       }
     }
+  }
+}
+
+/* Estilos para tablets (768px de largura ou menos) */
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%; /* Ocupar toda a largura disponível */
+  }
+
+  .image {
+    height: auto; /* Remover altura fixa para permitir ajuste proporcional */
+  }
+
+  h2 {
+    font-size: 14px; /* Aumentar tamanho da fonte */
+  }
+
+  .prices {
+    gap: 10px; /* Reduzir espaçamento entre preços */
+  }
+}
+
+/* Estilos para dispositivos móveis (576px de largura ou menos) */
+@media screen and (max-width: 576px) {
+  .card {
+    width: 100%; /* Ocupar toda a largura disponível */
+  }
+
+  .image {
+    height: auto; /* Remover altura fixa para permitir ajuste proporcional */
+  }
+
+  h2 {
+    font-size: 16px; /* Aumentar tamanho da fonte */
+  }
+
+  .prices {
+    gap: 5px; /* Reduzir ainda mais o espaçamento entre preços */
   }
 }

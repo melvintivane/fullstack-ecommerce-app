@@ -1,41 +1,73 @@
 .products {
-    padding: 15px 50px 10px 50px;
-    display: flex;
-  
-    .left {
-      flex: 1;
-      position: sticky;
-      height: 100px;
-      top: 20px;
-  
-      .filterItem {
-        margin-bottom: 30px;
-  
-        h2 {
-          font-weight: 400;
-          margin-bottom: 10px;
-          font-size: 18px;
-        }
-  
-        .inputItem {
-          margin-bottom: 10px;
+  padding: 15px 50px 10px 50px;
+  display: flex;
 
-          label{
-            font-size: 14px;
-            margin-left: 10px;
-          }
-        }
+  .left {
+    flex: 1;
+    position: sticky;
+    height: 100px;
+    top: 20px;
+
+    .filterItem {
+      margin-bottom: 30px;
+
+      h2 {
+        font-weight: 400;
+        margin-bottom: 10px;
+        font-size: 18px;
       }
-    }
-    
-    .right {
-      flex: 4;
-  
-      .catImg {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        margin-bottom: 50px;
+
+      .inputItem {
+        margin-bottom: 10px;
+
+        label {
+          font-size: 14px;
+          margin-left: 10px;
+        }
       }
     }
   }
+
+  .right {
+    flex: 4;
+
+    .catImg {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+/* Estilos para tablets (768px de largura ou menos) */
+@media screen and (max-width: 768px) {
+  .products {
+    flex-direction: column; /* Empilhar elementos verticalmente */
+    padding: 15px 20px; /* Reduzir o preenchimento */
+  }
+
+  .left {
+    flex: none; /* Não flexionar */
+    position: static; /* Remover a posição fixa */
+    height: auto; /* Ajustar altura automaticamente */
+    top: auto; /* Remover a propriedade top */
+  }
+
+  .right {
+    flex: none; /* Não flexionar */
+    width: 100%; /* Ocupar toda a largura disponível */
+  }
+
+  .catImg {
+    height: auto; /* Redimensionar a imagem de acordo com a largura */
+    margin-bottom: 20px; /* Reduzir a margem inferior */
+  }
+}
+
+/* Estilos para dispositivos móveis (576px de largura ou menos) */
+@media screen and (max-width: 576px) {
+  .products {
+    padding: 15px 10px; /* Reduzir ainda mais o preenchimento */
+  }
+}
