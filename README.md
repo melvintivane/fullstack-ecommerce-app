@@ -73,7 +73,6 @@ The User schema represents users registered in the system. Data is stored as fol
 - isAdmin: A boolean indicating whether the user is an administrator (default: false).
 
 ### Product Collection
-
 The Product schema represents the products available in the store. Data is stored as follows:
 
 - title: A string that represents the product title (required and unique).
