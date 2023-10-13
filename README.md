@@ -5,6 +5,11 @@ A MERN stack e-commerce project that allows users to browse, add to cart, and pu
 ## Technologies Used
 
 - Node.js
-- Expresso.js
-- To react
+- Express.js
+- React
 - MongoDB
+
+## Installation
+1. Clone this repository using:
+```shell
+    git clone https://github.com/melvintivane/fullstack-ecommerce-app.git
