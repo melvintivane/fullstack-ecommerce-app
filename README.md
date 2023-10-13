@@ -20,22 +20,36 @@ A MERN stack e-commerce project that allows users to browse, add to cart, and pu
     npm install
 ```
 
-3. In the api folder, set your .env environment variables
+3. Install client dependencies (frontend)
+```shell
+    cd client
+    npm install
+```
+
+## Configuration
+1. In the api folder, set your .env environment variables
 ```shell
     MONGO_URL = your_mongodb_uri
     CRYPTOJS_SECRET = set_up_super_strong_secret_key 
     JWT_SECRET = set_up_super_strong_secret_key
 ```
 
-4. Install client dependencies (frontend)
-```shell
-    cd client
-    npm install
-```
-
-5. In the client folder, set your .env environment variables
+2. In the client folder, set your .env environment variables
 ```shell
     REACT_APP_API_TOKEN = your_api_token
     REACT_APP_API_URL = http://localhost:1337/api or your_api_url
     STRIPE_KEY = your_secret_key
+```
+
+## Execution
+1. Start the server
+```shell
+    cd api
+    npm start
+```
+
+2. Start the client
+```shell
+    cd client
+    npm run dev
 ```
