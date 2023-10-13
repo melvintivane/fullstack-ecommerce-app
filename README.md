@@ -65,49 +65,49 @@ A MERN stack e-commerce project that allows users to browse, add to cart, and pu
 
 The User schema represents users registered in the system. Data is stored as follows:
 
-- name: A string representing the user's name (required).
-- lastname: A string representing the user's last name (required).
-- username: A string representing the unique (required and unique) username.
-- email: A string representing the user's email address (required and unique).
-- password: A string representing the user's password (required).
-- isAdmin: A boolean indicating whether the user is an administrator (default: false).
+- `name`: A string representing the user's name (required).
+- `lastname`: A string representing the user's last name (required).
+- `username`: A string representing the unique (required and unique) username.
+- `email`: A string representing the user's email address (required and unique).
+- `password`: A string representing the user's password (required).
+- `isAdmin`: A boolean indicating whether the user is an administrator (default: false).
 
 ### Product Collection
 The Product schema represents the products available in the store. Data is stored as follows:
 
-- title: A string that represents the product title (required and unique).
-- description: A string that describes the product (required).
-- image1: A string containing the path to the first image of the product (required).
-- image2: A string containing the path to the second product image (required).
-- type: A string describing the type of product (required).
-- categories: An array of strings containing categories associated with the product.
-- tags: An array of strings containing tags associated with the product.
-- size: An array of strings containing available sizes for the product (required).
-- color: An array of strings containing colors available for the product (required).
-- oldPrice: A number that represents the old price of the product (required).
-- price: A number that represents the current price of the product (required).
-- inStock: A boolean indicating whether the product is in stock (default: true).
-- is_New: A boolean indicating whether the product is new (default: false).
-- quantity: A number that represents the quantity available in stock (required).
+- `title`: A string that represents the product title (required and unique).
+- `description`: A string that describes the product (required).
+- `image1`: A string containing the path to the first image of the product (required).
+- `image2`: A string containing the path to the second product image (required).
+- `type`: A string describing the type of product (required).
+- `categories`: An array of strings containing categories associated with the product.
+- `tags`: An array of strings containing tags associated with the product.
+- `size`: An array of strings containing available sizes for the product (required).
+- `color`: An array of strings containing colors available for the product (required).
+- `oldPrice`: A number that represents the old price of the product (required).
+- `price`: A number that represents the current price of the product (required).
+- `inStock`: A boolean indicating whether the product is in stock (default: true).
+- `is_New`: A boolean indicating whether the product is new (default: false).
+- `quantity`: A number that represents the quantity available in stock (required).
 
 ### Card Collection
 
 The Cart schema represents a user's shopping cart. Data is stored as follows:
 
-- userId: A string that represents the ID of the user who owns the cart (required).
-- product: An array of objects that contains information about the products in the cart.
-- productId: A string representing the ID of the product in the cart.
-- quantity: A number that indicates the quantity of this product in the cart (default: 1).
+- `userId`: A string that represents the ID of the user who owns the cart (required).
+- `product`: An array of objects that contains information about the products in the cart.
+- `productId`: A string representing the ID of the product in the cart.
+- `quantity`: A number that indicates the quantity of this product in the cart (default: 1).
 
 ### Order Collection
 
 The Order schema represents orders placed by users. Data is stored as follows:
 
-- userId: A string that represents the ID of the user who made the request (required).
-- product: An array of objects that contains information about the products in the order.
-- productId: A string representing the ID of the product in the order.
-- quantity: A number that indicates the quantity of this product in the order (default: 1).
-- price: A number that represents the price of the product at the time of ordering.
-- amount: A number that represents the total value of the order (required).
-- address: An object that contains information about the delivery address (required).
-- status: A string indicating the status of the order (default: "pending").
+- `userId`: A string that represents the ID of the user who made the request (required).
+- `product`: An array of objects that contains information about the products in the order.
+- `productId`: A string representing the ID of the product in the order.
+- `quantity`: A number that indicates the quantity of this product in the order (default: 1).
+- `price`: A number that represents the price of the product at the time of ordering.
+- `amount`: A number that represents the total value of the order (required).
+- `address`: An object that contains information about the delivery address (required).
+- `status`: A string indicating the status of the order (default: "pending").
